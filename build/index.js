@@ -1,0 +1,1 @@
+(()=>{var r={693:()=>{console.log("Hello world!")}},o={};function e(t){var s=o[t];if(void 0!==s)return s.exports;var l=o[t]={exports:{}};return r[t](l,l.exports,e),l.exports}(()=>{"use strict";e(693)})()})();
