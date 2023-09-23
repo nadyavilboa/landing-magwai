@@ -12,6 +12,7 @@
     transform: skewX(-20deg);
     text-decoration: none;
     position: relative;
+    border: 0;
 
     &::after {
         content: '';
@@ -25,5 +26,13 @@
 
     span {
         transform: skewX(20deg);
+    }
+
+    @media(min-width: $tablet-width) {
+        padding: 23px;
+
+        &::after {
+            height: 60px;
+        }
     }
 }

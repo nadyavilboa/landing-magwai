@@ -7,6 +7,10 @@
         text-transform: uppercase;
         color: $base-white;
         margin-bottom: 30px;
+        
+        @media(min-width: $tablet-width) {
+            font-size: 42px;
+        }
     }
 
     &__list {
@@ -14,9 +18,18 @@
         flex-direction: column;
         gap: 20px;
         margin-bottom: 38px;
+
+        @media(min-width: $tablet-width) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
 
     &__btn-more {
         margin: 0 auto;
+    }
+
+    @media(min-width: $tablet-width) {
+        padding: 44px 0 156px;
     }
 }

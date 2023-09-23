@@ -55,4 +55,8 @@
         font-weight: 600;
         margin-top: 5px;
     }
+
+    @media(min-width: $tablet-width) {
+        width: calc(100% / 2 - 10px);
+    }
 }

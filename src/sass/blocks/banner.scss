@@ -22,17 +22,39 @@
         gap: 20px;
         position: relative;
         z-index: 5;
+
+        @media(min-width: $tablet-width) {
+            gap: 40px;
+        }
     }
 
     &__title {
         font-size: 20px;
         font-weight: 700;
         text-transform: uppercase;
+
+        @media(min-width: $tablet-width) {
+            font-size: 38px;
+            max-width: 600px;
+        }
     }
 
     &__text {
         font-size: 14px;
         line-height: 21px;
         opacity: 0.79;
+
+        @media(min-width: $tablet-width) {
+            font-size: 16px;
+            line-height: 24px;
+            max-width: 450px;
+        }
+    }
+
+    @media(min-width: $tablet-width) {
+        padding: 551px 0 76px 0;
+        border-radius: 60px 60px 0 0;
+        background: url("../assets/img/banner-tablet.png"), lightgray 50% / cover no-repeat;
+        background-size: cover;
     }
 }

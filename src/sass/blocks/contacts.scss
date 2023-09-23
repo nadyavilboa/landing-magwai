@@ -1,0 +1,22 @@
+.contacts {
+    &__phone-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 14.34px;
+        transform: skewX(-20deg);
+        border: 1px solid $base-white;
+        opacity: 0.6;
+
+        svg {
+            transform: skewX(20deg);
+        }
+    }
+
+    &--tablet {
+        @media(min-width: $tablet-width) {
+            display: flex;
+            gap: 5px;
+        }
+    }
+}

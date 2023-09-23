@@ -16,4 +16,15 @@
         border: 0;
         background: transparent;
     }
+
+    @media(min-width: $tablet-width) {
+        padding: 30px 0 27px;
+    }
+}
+
+.page-header__logo-link svg {
+    @media(min-width: $tablet-width) {
+        width: 156px;
+        height: 60px;
+    }
 }
