@@ -1,0 +1,19 @@
+.page-header {
+    padding: 15px 0;
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__navigation,
+    &__contacts {
+        display: none;
+    }
+
+    &__menu-toggle {
+        border: 0;
+        background: transparent;
+    }
+}

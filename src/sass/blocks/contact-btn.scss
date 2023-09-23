@@ -1,0 +1,29 @@
+.contact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14.34px;
+    background: $bg-btn;
+    color: $base-white;
+    max-width: 220px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    transform: skewX(-20deg);
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 43.66px;
+        background: $base-white;
+        position: absolute;
+        right: -10px;
+    }
+
+    span {
+        transform: skewX(20deg);
+    }
+}
