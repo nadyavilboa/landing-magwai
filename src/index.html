@@ -25,22 +25,22 @@
             </a>
             <nav class="page-header__navigation navigation">
                 <div class="navigation__menu-links">
-                    <a href="#" target="_blank" class="menu__link">Услуги</a>
-                    <a href="#" target="_blank" class="menu__link">Абонементы</a>
-                    <a href="#" target="_blank" class="menu__link">Почему мы</a>
-                    <a href="#" target="_blank" class="menu__link">Оборудование</a>
-                    <a href="#" target="_blank" class="menu__link">Акции</a>
-                    <a href="#" target="_blank" class="menu__link">FAQ</a>
-                    <a href="#" target="_blank" class="menu__link">Контакты</a>
+                    <a href="#" target="_blank" class="navigation__link">Услуги</a>
+                    <a href="#" target="_blank" class="navigation__link">Абонементы</a>
+                    <a href="#" target="_blank" class="navigation__link">Почему мы</a>
+                    <a href="#" target="_blank" class="navigation__link">Оборудование</a>
+                    <a href="#" target="_blank" class="navigation__link">Акции</a>
+                    <a href="#" target="_blank" class="navigation__link">FAQ</a>
+                    <a href="#" target="_blank" class="navigation__link">Контакты</a>
                 </div>
-                <div class="page-header__contacts contacts">
+                <div class="navigation__contacts">
                     <a href="#" target="_blank" class="contacts__phone-btn">
                         <span class="visually-hidden">phone link</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#phone-icon" />
                         </svg>
                     </a>
-                    <button class="contacts__modal-btn contact-btn">Оставить заявку</button>
+                    <button class="contacts__modal-btn contact-btn btn-modal">Оставить заявку</button>
                 </div>
             </nav>
             <div class="page-header__contacts contacts contacts--tablet">
@@ -50,7 +50,7 @@
                         <use xlink:href="#phone-icon" />
                     </svg>
                 </a>
-                <button class="contacts__modal-btn contact-btn">Оставить заявку</button>
+                <button class="contacts__modal-btn contact-btn btn-modal">Оставить заявку</button>
             </div>
         </div>
     </header>
@@ -59,7 +59,7 @@
             <div class="banner__container container">
                 <div class="banner__title">Полет Илона Маска и&nbspDOGIE COIN</div>
                 <div class="banner__text">В прошлый четверг все офигели от полета DOGIE COIN на марс.</div>
-                <div class="banner__btn contact-btn">
+                <div class="banner__btn contact-btn btn-modal">
                     <span>Оставить заявку</span>
                 </div>
             </div>
@@ -162,6 +162,36 @@
         </section>
         </div>
     </main>
+    <div class="modal d-none">
+        <div class="modal__wrapper">
+            <div class="modal__header">
+                <div class="modal__title">
+                    Заявка
+                </div>
+                <div class="modal__close">
+                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#close-icon" />
+                    </svg>
+                </div>
+            </div>
+            <form action="#" class="modal__form">
+                <div class="modal__form-item">
+                    <label for="user-name" class="modal__label">Ваше имя:*</label>
+                    <input class="modal__input" id="user-name" name="user-name" type="text" required />
+                </div>
+                <div class="modal__form-item">
+                    <label for="user-phone" class="modal__label">Ваш телефон:*</label>
+                    <input class="modal__input" id="user-phone" name="user-phone" type="phone" required />
+                </div>
+                <div class="modal__form-item">
+                    <label for="user-phone" class="modal__label">Комментарий:</label>
+                    <textarea class="modal__textarea" name="user-comment" id="user-comment"></textarea>
+                </div>
+                <div class="modal__comment">*обязательные поля</div>
+                <button class="modal__btn">Отправить</button>
+            </form>
+        </div>
+    </div>
     <div class="d-none">
         <svg>
             <symbol id="logo" viewBox="0 0 157 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -187,7 +217,11 @@
             </symbol>           
             <symbol id="phone-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.3342 14.2139L15.0564 12.491C15.2883 12.2618 15.5818 12.1049 15.9012 12.0394C16.2205 11.9739 16.552 12.0025 16.8555 12.1218L18.9544 12.9602C19.261 13.0847 19.5239 13.2972 19.71 13.5709C19.8961 13.8447 19.997 14.1674 20 14.4985V18.3442C19.9982 18.5694 19.9509 18.7919 19.8609 18.9983C19.7709 19.2047 19.6401 19.3908 19.4763 19.5453C19.3125 19.6998 19.1192 19.8195 18.9079 19.8973C18.6967 19.9751 18.4719 20.0093 18.2471 19.9979C3.5392 19.0826 0.57149 6.62239 0.010239 1.85368C-0.0158147 1.6195 0.00798984 1.38246 0.0800864 1.15814C0.152183 0.933831 0.270938 0.727331 0.428538 0.55223C0.586138 0.377128 0.779012 0.237394 0.994471 0.142219C1.20993 0.0470438 1.44309 -0.00141458 1.67862 3.14343e-05H5.3921C5.72347 0.0010127 6.04698 0.101149 6.321 0.287561C6.59503 0.473973 6.80704 0.738135 6.92977 1.04607L7.7678 3.14584C7.89101 3.44817 7.92245 3.78011 7.85818 4.10021C7.79391 4.4203 7.63679 4.71436 7.40645 4.94565L5.68426 6.66854C5.68426 6.66854 6.67606 13.3832 13.3342 14.2139Z" fill="white"/>
-            </symbol>                
+            </symbol>
+            <symbol id="close-icon" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0003 19.0002L1.00034 2.00015L2.41455 0.585938L19.4145 17.5859L18.0003 19.0002Z" fill="#171717"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0002 2.00015L2.00015 19.0002L0.585938 17.5859L17.5859 0.585938L19.0002 2.00015Z" fill="#171717"/>
+            </symbol>                          
         </svg>
     </div>
     <script src="index.js"></script>

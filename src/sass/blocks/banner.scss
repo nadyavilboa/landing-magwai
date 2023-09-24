@@ -14,6 +14,14 @@
         height: 281px;
         background: linear-gradient(180deg, #131313 0%, rgba(19, 19, 19, 0.00) 100%);
         transform: rotate(180deg);
+
+        @media(min-width: $tablet-width) {
+            height: 480px;
+        }
+
+        @media(min-width: $desktop-width) {
+            height: 520px;
+        }
     }
 
     &__container {
@@ -37,6 +45,10 @@
             font-size: 38px;
             max-width: 600px;
         }
+
+        @media(min-width: $desktop-width) {
+            font-size: 42px;
+        }
     }
 
     &__text {
@@ -49,12 +61,25 @@
             line-height: 24px;
             max-width: 450px;
         }
+
+        @media(min-width: $desktop-width) {
+            max-width: none;
+        }
     }
 
     @media(min-width: $tablet-width) {
-        padding: 551px 0 76px 0;
+        padding: 459px 0 76px 0;
         border-radius: 60px 60px 0 0;
         background: url("../assets/img/banner-tablet.png"), lightgray 50% / cover no-repeat;
         background-size: cover;
+    }
+
+    @media(min-width: $small-desktop-width) {
+        padding: 597px 0 96px 0;
+        background-size: cover;
+    }
+
+    @media(min-width: $desktop-width) {
+        background: url("../assets/img/banner-desktop.png"), $text-black 50% / cover no-repeat;
     }
 }

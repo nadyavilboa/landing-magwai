@@ -59,4 +59,8 @@
     @media(min-width: $tablet-width) {
         width: calc(100% / 2 - 10px);
     }
+
+    @media(min-width: $desktop-width) {
+        width: calc(100% / 4 - 15px);
+    }
 }

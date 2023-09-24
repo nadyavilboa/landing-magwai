@@ -1,0 +1,95 @@
+.navigation {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 51px;
+    display: none;
+    padding: 20px 15px;
+    background: $base-black;
+
+    &__visible {
+        display: flex;
+        width: 100%;
+
+        @media(min-width: $tablet-width) {
+            padding: 79px 49px 387px;
+        }
+
+        .navigation__menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .navigation__link {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 700;
+            color: $base-black;
+            text-shadow: 
+                1px 0 1px $menu-link, 
+                0 1px 1px $menu-link, 
+                -1px 0 1px $menu-link, 
+                0 -1px 1px $menu-link;
+        }
+
+        .navigation__contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            width: 100%;
+            padding: 0 8px;
+
+            .contact-btn {
+                max-width: none;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            @media(min-width: $tablet-width) {
+                display: none;
+            }
+        }
+    }
+
+    @media(min-width: $small-desktop-width) {
+        display: flex;
+        flex-direction: row;
+        position: inherit;
+
+        &__menu-links {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        &__link {
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 21px;
+            color: $base-white;
+            text-transform: uppercase;
+        }
+
+        &__contacts {
+            display: none;
+        }
+    }
+
+    @media(min-width: $desktop-width) {
+        &__menu-links {
+            gap: 30px;
+        }
+    }
+
+    @media(min-width: $big-desktop-width) {
+        &__menu-links {
+            gap: 42px;
+        }
+    }
+}

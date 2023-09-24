@@ -1,5 +1,9 @@
 .page-header {
     padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: $base-black;
     
     &__container {
         display: flex;
@@ -15,6 +19,13 @@
     &__menu-toggle {
         border: 0;
         background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media(min-width: $small-desktop-width) {
+            display: none;
+        }
     }
 
     @media(min-width: $tablet-width) {
