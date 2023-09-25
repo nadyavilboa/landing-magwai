@@ -8,3 +8,5 @@
     <li>Если нужна сборка для production, то npm run build</li>
 </ul>
 <p>Автор: Вильбоа Надежда</p>
+
+<a href="https://nadyavilboa.github.io/madwai-public/" target="_blank">Ссылка для просмотра в браузере</a>
