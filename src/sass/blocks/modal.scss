@@ -36,6 +36,7 @@
             max-width: 450px;
             border-radius: 60px;
             padding: 60px;
+            box-shadow: $modal-shadow;
         }
     }
 
@@ -69,6 +70,12 @@
         padding: 16px;
         border: 1px solid $text-black;
         border-radius: 6px;
+
+        &:focus-visible {
+            outline: none;
+            border: 1px solid $text-black;
+            box-shadow: $modal-shadow;
+        }
     }
 
     &__textarea {
@@ -89,5 +96,10 @@
         background: $text-black;
         border: 0;
         border-radius: 6px;
+
+        &:hover,
+        &:active {
+            background: $bg-btn-active;
+        }
     }
 }
