@@ -99,14 +99,21 @@
 }
 
 .animation-fadeIn {
-    animation-name: fadeIn;
-    animation-iteration-count: 1;
-    animation-duration: 0.5s;
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
 }
 
 .animation-fadeOut {
-    animation-name: fadeOut;
-    animation-iteration-count: 1;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 }

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/nadyavilboa/landing-magwai#readme",
   "dependencies": {
+    "autoprefixer": "^10.4.16",
     "axios": "^1.5.0",
     "css-loader": "^6.8.1",
     "sass": "^1.68.0",

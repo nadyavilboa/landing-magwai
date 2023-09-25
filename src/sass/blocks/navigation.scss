@@ -3,13 +3,18 @@
     top: 72px;
     left: 0;
     right: 0;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 51px;
     display: none;
     padding: 20px 15px;
     background: $base-black;
 
     &__visible {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 100%;
 
@@ -19,8 +24,13 @@
         }
 
         .navigation__menu-links {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             gap: 15px;
         }
 
@@ -35,17 +45,26 @@
                 0 1px 1px $menu-link, 
                 -1px 0 1px $menu-link, 
                 0 -1px 1px $menu-link;
+            -webkit-transition: all 0.3s ease-in;
+            -o-transition: all 0.3s ease-in;
             transition: all 0.3s ease-in;
 
             &:hover,
             &:active {
-                transform: skewX(-20deg);
+                -webkit-transform: skewX(-20deg);
+                    -ms-transform: skewX(-20deg);
+                        transform: skewX(-20deg);
             }
         }
 
         .navigation__contacts {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             gap: 6px;
             width: 100%;
             padding: 0 8px;
@@ -65,13 +84,22 @@
     }
 
     @media(min-width: $small-desktop-width) {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         position: inherit;
 
         &__menu-links {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             gap: 15px;
         }
 
@@ -81,11 +109,15 @@
             line-height: 21px;
             color: $base-white;
             text-transform: uppercase;
+            -webkit-transition: all 0.3s ease-in;
+            -o-transition: all 0.3s ease-in;
             transition: all 0.3s ease-in;
 
             &:hover,
             &:active {
-                transform: skewX(-20deg);
+                -webkit-transform: skewX(-20deg);
+                    -ms-transform: skewX(-20deg);
+                        transform: skewX(-20deg);
             }
         }
 
