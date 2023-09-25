@@ -1,30 +1,40 @@
+import { modalOpen, modalClose } from "./modal";
+import { loadData, downloadPartPosts } from "./download";
+import { appendPosts } from "./appendPosts";
+
 const menu = document.querySelector('.navigation');
 const menuBtn = document.querySelector('#menu-toggle');
 
 const modalBtn = document.querySelectorAll('.btn-modal');
 const modalCloseBtn = document.querySelector('.modal__close');
-const modal = document.querySelector('.modal');
-const modalWrapper = modal.querySelector('.modal__wrapper');
+
+const btnMore = document.querySelector('.btn-more');
+
+const IMG_URL = 'img/post-img10.png';
+const POST_NAME ='Nature';
+
+let postFull = [];
+let partPosts = [];
 
 const menuToggle = () => {
     menu.classList.toggle('navigation__visible');
 }
 
-const modalOpen = () => {
-    modal.classList.remove('d-none');
-    modal.classList.add('modal-visible');
-    modalWrapper.classList.remove('animation-fadeOut');
-    modalWrapper.classList.add('animation-fadeIn');
+const addDataToPartPosts = () => {
+    partPosts.forEach((post) => {
+        post.img = IMG_URL;
+        post.name = POST_NAME;
+    });
+
+    return partPosts;
 }
 
-const modalClose = () => {
-    modalWrapper.classList.remove('animation-fadeIn');
-    modalWrapper.classList.add('animation-fadeOut');
-    setTimeout(() => {
-        modal.classList.add('d-none');
-        modal.classList.remove('modal-visible');
-    }, 500);
-
+const btnMoreClickHandler = (evt) => {
+    evt.preventDefault();
+    partPosts = downloadPartPosts(postFull);
+    addDataToPartPosts();
+    
+    appendPosts(partPosts);
 }
 
 menuBtn.addEventListener('click', () => menuToggle());
@@ -37,3 +47,9 @@ document.addEventListener('keydown', function (e) {
         modalClose();
     }
 });
+
+document.addEventListener("DOMContentLoaded", async () => {
+    postFull = await loadData();
+});
+
+btnMore.addEventListener('click', (evt) => btnMoreClickHandler(evt));
